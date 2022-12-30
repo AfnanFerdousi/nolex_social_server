@@ -43,7 +43,7 @@ function verifyJWT(req, res, next) {
 
 async function run() {
     try {
-        await client.connect();
+        // await client.connect();
         // ALL COLLECTIONS
         const postCollection = client.db('nolax').collection('postCollection');
         const userCollection = client.db('nolax').collection('users');
@@ -166,3 +166,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Nolax listening on port ${port}`)
 })
+
+module.exports = app;
